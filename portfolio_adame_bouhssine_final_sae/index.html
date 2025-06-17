@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Adame Bouhssine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { background: #fafafa; font-family: 'Segoe UI', Arial, sans-serif; color: #222; margin:0; }
+        .container { max-width: 800px; margin: 32px auto; background: #fff; border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,.15); padding: 2rem; }
+        header { text-align: center; background: linear-gradient(90deg, #007a3d 20%, #fff 70%, #ff0000 100%); border-radius: 24px 24px 0 0; padding: 2rem 1rem 1rem 1rem; }
+        header h1 { margin-bottom: 0.25rem; }
+        header p { font-style: italic; margin-top: 0; color: #202; }
+        nav { text-align: center; margin: 2rem 0 1rem 0; }
+        nav a { margin: 0 1rem; color: #007a3d; text-decoration: none; font-weight: bold; transition: color .2s;}
+        nav a:hover { color: #ff0000; }
+        section { margin-bottom: 2rem; }
+        .comp-cards { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;}
+        .card { background: #f6f6f6; border-radius: 16px; padding: 1rem 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,.10); min-width: 200px; max-width: 300px; flex: 1 1 200px;}
+        .card i, .comp-list i { margin-right: 8px; color: #007a3d; }
+        .comp-list { list-style: none; padding-left: 0; }
+        .comp-list li { margin-bottom: 0.6rem; font-size: 1.07rem;}
+        .sae-list { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+        .sae-card { background: #fff; border: 2px solid #007a3d; border-radius: 12px; padding: 1rem; min-width: 220px; flex: 1 1 220px; text-align: left; transition: border .2s;}
+        .sae-card:hover { border-color: #ff0000; }
+        .sae-card h3 { margin: 0 0 8px 0; font-size: 1.11rem;}
+        .sae-card a { color: #007a3d; text-decoration: underline; }
+        .sae-card i { margin-right: 6px;}
+        img.bac { display:block; max-width:220px; margin:1.2rem auto 0 auto; border-radius:12px; box-shadow:0 2px 16px rgba(0,0,0,.10);}
+        @media (max-width:700px) {
+            .container { padding:0.5rem;}
+            .comp-cards, .sae-list { flex-direction:column;}
+        }
+        footer { text-align: center; margin-top:2rem; color: #666;}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Adame Bouhssine</h1>
+        <p>Entre réseaux et interventions, je trace ma route : futur pro des télécoms, pompier volontaire et arbitre sur tous les terrains.</p>
+    </header>
+    <nav>
+        <a href="#competences"><i class="fa-solid fa-brain"></i> Compétences</a>
+        <a href="#diplomes"><i class="fa-solid fa-graduation-cap"></i> Diplômes</a>
+        <a href="#sae"><i class="fa-solid fa-network-wired"></i> Projets SAE</a>
+        <a href="cv-adame-bouhssine.pdf" download><i class="fa-solid fa-file-pdf"></i> CV</a>
+    </nav>
+
+    <section>
+        <h2><i class="fa-solid fa-user"></i> À propos</h2>
+        <ul class="comp-list">
+            <li><i class="fa-solid fa-location-dot"></i> Wittelsheim</li>
+            <li><i class="fa-solid fa-envelope"></i> bouhssineadame@gmail.com</li>
+            <li><i class="fa-solid fa-phone"></i> 07 82 54 24 71</li>
+        </ul>
+        <p>Je suis étudiant en BUT Réseaux & Télécoms à Colmar, engagé comme sapeur-pompier volontaire à Wittelsheim, passionné de foot et arbitre officiel. Curieux, rigoureux, toujours prêt à apprendre, je combine mes compétences techniques et humaines sur tous les terrains.</p>
+    </section>
+
+    <section id="competences">
+        <h2><i class="fa-solid fa-gears"></i> Compétences techniques</h2>
+        <div class="comp-cards">
+            <div class="card"><i class="fa-solid fa-network-wired"></i> Configuration réseau (IP, VLAN, routage)</div>
+            <div class="card"><i class="fa-brands fa-linux"></i> Administration Linux/Windows</div>
+            <div class="card"><i class="fa-solid fa-server"></i> Services réseau : DHCP, DNS, VPN</div>
+            <div class="card"><i class="fa-solid fa-shield-halved"></i> Sécurité : firewall, ACL, supervision</div>
+            <div class="card"><i class="fa-solid fa-microscope"></i> Outils : Packet Tracer, GNS3, Wireshark, Python</div>
+        </div>
+    </section>
+
+    <section>
+        <h2><i class="fa-solid fa-users"></i> Qualités & Soft Skills</h2>
+        <ul class="comp-list">
+            <li><i class="fa-solid fa-handshake"></i> Travail en équipe</li>
+            <li><i class="fa-solid fa-user-gear"></i> Autonomie</li>
+            <li><i class="fa-solid fa-brain"></i> Curiosité technique</li>
+            <li><i class="fa-solid fa-list-check"></i> Rigueur</li>
+            <li><i class="fa-solid fa-bolt"></i> Réactivité</li>
+            <li><i class="fa-solid fa-comments"></i> Communication</li>
+        </ul>
+    </section>
+
+    <section id="diplomes">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Diplômes</h2>
+        <p><b>Baccalauréat Général 2024</b><br>Spécialités : Numérique et sciences informatiques, Sciences de l’ingénieur</p>
+        <img class="bac" src="baccalaureat.png" alt="Diplôme du Baccalauréat">
+    </section>
+
+    <section id="sae">
+        <h2><i class="fa-solid fa-network-wired"></i> Mes projets SAE</h2>
+        <div class="sae-list">
+            <div class="sae-card">
+                <h3><i class="fa-solid fa-diagram-project"></i> SAE 1.02</h3>
+                <p>Architecture réseau complète sur EVE-NG, VLANs, DHCP, topologie, tout fait en solo.</p>
+                <a href="sae-102.html">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="sae-card">
+                <h3><i class="fa-solid fa-network-wired"></i> SAE 1.05</h3>
+                <p>Comprendre les protocoles, analyse OSI/TCP-IP, DNS, client/serveur, tout en autonomie.</p>
+                <a href="sae-105.html">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="sae-card">
+                <h3><i class="fa-solid fa-shield-halved"></i> SAE 1.11</h3>
+                <p>Hygiène informatique, cybersécurité, protection des données, projet réalisé en binôme.</p>
+                <a href="sae-111.html">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="sae-card">
+                <h3><i class="fa-solid fa-wifi"></i> SAE 1.13</h3>
+                <p>Installation et étude WiFi, heatmap, mesure débit, analyse à 4 en équipe.</p>
+                <a href="sae-113.html">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Adame Bouhssine - Portfolio personnel</p>
+    </footer>
+    </div>
+</body>
+</html>
