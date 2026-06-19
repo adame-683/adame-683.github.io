@@ -1,120 +1,361 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio - Adame Bouhssine</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body { background: #fafafa; font-family: 'Segoe UI', Arial, sans-serif; color: #222; margin:0; }
-        .container { max-width: 800px; margin: 32px auto; background: #fff; border-radius: 24px; box-shadow: 0 8px 30px rgba(0,0,0,.15); padding: 2rem; }
-        header { text-align: center; background: linear-gradient(90deg, #007a3d 20%, #fff 70%, #ff0000 100%); border-radius: 24px 24px 0 0; padding: 2rem 1rem 1rem 1rem; }
-        header h1 { margin-bottom: 0.25rem; }
-        header p { font-style: italic; margin-top: 0; color: #202; }
-        nav { text-align: center; margin: 2rem 0 1rem 0; }
-        nav a { margin: 0 1rem; color: #007a3d; text-decoration: none; font-weight: bold; transition: color .2s;}
-        nav a:hover { color: #ff0000; }
-        section { margin-bottom: 2rem; }
-        .comp-cards { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;}
-        .card { background: #f6f6f6; border-radius: 16px; padding: 1rem 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,.10); min-width: 200px; max-width: 300px; flex: 1 1 200px;}
-        .card i, .comp-list i { margin-right: 8px; color: #007a3d; }
-        .comp-list { list-style: none; padding-left: 0; }
-        .comp-list li { margin-bottom: 0.6rem; font-size: 1.07rem;}
-        .sae-list { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-        .sae-card { background: #fff; border: 2px solid #007a3d; border-radius: 12px; padding: 1rem; min-width: 220px; flex: 1 1 220px; text-align: left; transition: border .2s;}
-        .sae-card:hover { border-color: #ff0000; }
-        .sae-card h3 { margin: 0 0 8px 0; font-size: 1.11rem;}
-        .sae-card a { color: #007a3d; text-decoration: underline; }
-        .sae-card i { margin-right: 6px;}
-        img.bac { display:block; max-width:220px; margin:1.2rem auto 0 auto; border-radius:12px; box-shadow:0 2px 16px rgba(0,0,0,.10);}
-        @media (max-width:700px) {
-            .container { padding:0.5rem;}
-            .comp-cards, .sae-list { flex-direction:column;}
-        }
-        footer { text-align: center; margin-top:2rem; color: #666;}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adame Bouhssine – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-    <header>
-        <h1>Adame Bouhssine</h1>
-        <p>Entre réseaux et interventions, je trace ma route : futur pro des télécoms, pompier volontaire et arbitre sur tous les terrains.</p>
-    </header>
-    <nav>
-        <a href="#competences"><i class="fa-solid fa-brain"></i> Compétences</a>
-        <a href="#diplomes"><i class="fa-solid fa-graduation-cap"></i> Diplômes</a>
-        <a href="#sae"><i class="fa-solid fa-network-wired"></i> Projets SAE</a>
-        <a href="cv-adame-bouhssine.pdf" download><i class="fa-solid fa-file-pdf"></i> CV</a>
-    </nav>
 
-    <section>
-        <h2><i class="fa-solid fa-user"></i> À propos</h2>
-        <ul class="comp-list">
-            <li><i class="fa-solid fa-location-dot"></i> Wittelsheim</li>
-            <li><i class="fa-solid fa-envelope"></i> bouhssineadame@gmail.com</li>
-            <li><i class="fa-solid fa-phone"></i> 07 82 54 24 71</li>
-        </ul>
-        <p>Je suis étudiant en BUT Réseaux & Télécoms à Colmar, engagé comme sapeur-pompier volontaire à Wittelsheim, passionné de foot et arbitre officiel. Curieux, rigoureux, toujours prêt à apprendre, je combine mes compétences techniques et humaines sur tous les terrains.</p>
-    </section>
+<div class="grid-overlay" aria-hidden="true"></div>
 
-    <section id="competences">
-        <h2><i class="fa-solid fa-gears"></i> Compétences techniques</h2>
-        <div class="comp-cards">
-            <div class="card"><i class="fa-solid fa-network-wired"></i> Configuration réseau (IP, VLAN, routage)</div>
-            <div class="card"><i class="fa-brands fa-linux"></i> Administration Linux/Windows</div>
-            <div class="card"><i class="fa-solid fa-server"></i> Services réseau : DHCP, DNS, VPN</div>
-            <div class="card"><i class="fa-solid fa-shield-halved"></i> Sécurité : firewall, ACL, supervision</div>
-            <div class="card"><i class="fa-solid fa-microscope"></i> Outils : Packet Tracer, GNS3, Wireshark, Python</div>
-        </div>
-    </section>
+<header class="topbar">
+  <a href="#accueil" class="logo">AB<span>·</span><small>ROM</small></a>
+  <nav class="nav">
+    <a href="#accueil">Accueil</a>
+    <a href="#bio">Profil</a>
+    <a href="#alternance">Alternance</a>
+    <a href="#sae">Modules SAÉ</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="nav-cta" href="CV_Adame_Bouhssine.pdf" target="_blank">CV ↗</a>
+</header>
 
-    <section>
-        <h2><i class="fa-solid fa-users"></i> Qualités & Soft Skills</h2>
-        <ul class="comp-list">
-            <li><i class="fa-solid fa-handshake"></i> Travail en équipe</li>
-            <li><i class="fa-solid fa-user-gear"></i> Autonomie</li>
-            <li><i class="fa-solid fa-brain"></i> Curiosité technique</li>
-            <li><i class="fa-solid fa-list-check"></i> Rigueur</li>
-            <li><i class="fa-solid fa-bolt"></i> Réactivité</li>
-            <li><i class="fa-solid fa-comments"></i> Communication</li>
-        </ul>
-    </section>
+<main>
 
-    <section id="diplomes">
-        <h2><i class="fa-solid fa-graduation-cap"></i> Diplômes</h2>
-        <p><b>Baccalauréat Général 2024</b><br>Spécialités : Numérique et sciences informatiques, Sciences de l’ingénieur</p>
-        <img class="bac" src="baccalaureat.png" alt="Diplôme du Baccalauréat">
-    </section>
-
-    <section id="sae">
-        <h2><i class="fa-solid fa-network-wired"></i> Mes projets SAE</h2>
-        <div class="sae-list">
-            <div class="sae-card">
-                <h3><i class="fa-solid fa-diagram-project"></i> SAE 1.02</h3>
-                <p>Architecture réseau complète sur EVE-NG, VLANs, DHCP, topologie, tout fait en solo.</p>
-                <a href="sae-102.html">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="sae-card">
-                <h3><i class="fa-solid fa-network-wired"></i> SAE 1.05</h3>
-                <p>Comprendre les protocoles, analyse OSI/TCP-IP, DNS, client/serveur, tout en autonomie.</p>
-                <a href="sae-105.html">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="sae-card">
-                <h3><i class="fa-solid fa-shield-halved"></i> SAE 1.11</h3>
-                <p>Hygiène informatique, cybersécurité, protection des données, projet réalisé en binôme.</p>
-                <a href="sae-111.html">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-            <div class="sae-card">
-                <h3><i class="fa-solid fa-wifi"></i> SAE 1.13</h3>
-                <p>Installation et étude WiFi, heatmap, mesure débit, analyse à 4 en équipe.</p>
-                <a href="sae-113.html">Voir le projet <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Adame Bouhssine - Portfolio personnel</p>
-    </footer>
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">// BUT Réseaux &amp; Télécommunications — Spécialité ROM</p>
+      <h1>Adame<br>Bouhssine</h1>
+      <p class="hero-lede">
+        Étudiant en 2<sup>e</sup> année de BUT R&amp;T, spécialité <strong>Réseaux Opérateurs Multimédia</strong>
+        à l'IUT de Colmar. En alternance chez <strong>EDF</strong>, je conçois et déploie des infrastructures
+        réseau et télécom pour des sites industriels critiques.
+      </p>
+      <div class="hero-actions">
+        <a href="#sae" class="btn btn-primary">Voir les modules SAÉ</a>
+        <a href="#alternance" class="btn btn-ghost">Mon alternance EDF</a>
+      </div>
+      <div class="hero-meta">
+        <div><span class="k">Formation</span><span class="v">BUT R&amp;T — ROM</span></div>
+        <div><span class="k">Structure</span><span class="v">Groupe EDF · DIGIT</span></div>
+        <div><span class="k">Période</span><span class="v">Alternance 2025–2027</span></div>
+      </div>
     </div>
+
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 520 360" class="topo">
+        <line x1="60" y1="180" x2="240" y2="100" class="link"/>
+        <line x1="60" y1="180" x2="240" y2="260" class="link"/>
+        <line x1="240" y1="100" x2="460" y2="100" class="link"/>
+        <line x1="240" y1="260" x2="460" y2="260" class="link"/>
+        <line x1="240" y1="100" x2="240" y2="260" class="link link-dim"/>
+
+        <circle cx="60" cy="180" r="9" class="node node-core"/>
+        <circle cx="240" cy="100" r="7" class="node"/>
+        <circle cx="240" cy="260" r="7" class="node"/>
+        <circle cx="460" cy="100" r="9" class="node node-site"/>
+        <circle cx="460" cy="260" r="9" class="node node-site"/>
+
+        <circle r="3.5" class="pulse">
+          <animateMotion dur="3.2s" repeatCount="indefinite" path="M60,180 L240,100 L460,100"/>
+        </circle>
+        <circle r="3.5" class="pulse pulse-b">
+          <animateMotion dur="3.6s" repeatCount="indefinite" path="M60,180 L240,260 L460,260"/>
+        </circle>
+
+        <text x="20" y="205" class="label">RP</text>
+        <text x="225" y="85" class="label">IOU</text>
+        <text x="225" y="285" class="label">IOU</text>
+        <text x="430" y="85" class="label">SITE A</text>
+        <text x="430" y="285" class="label">SITE B</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- BIO -->
+  <section id="bio" class="bio">
+    <div class="section-head">
+      <span class="tag">01 — Profil</span>
+      <h2>Le terrain avant la théorie</h2>
+    </div>
+    <div class="bio-body">
+      <p>
+        Curieux et méthodique, j'ai construit mon parcours autour d'engagements de terrain — arbitrage
+        en football, sapeur-pompier volontaire — avant de me spécialiser dans les réseaux et
+        télécommunications. Cette double culture, rigueur opérationnelle et exigence technique,
+        guide aujourd'hui ma façon de travailler sur les infrastructures.
+      </p>
+      <p>
+        J'ai choisi la spécialité <strong>ROM (Réseaux Opérateurs Multimédia)</strong> pour son ancrage
+        dans les architectures d'opérateurs et de services convergents : routage, sécurisation
+        des liaisons inter-sites, diffusion multimédia et automatisation. Mon alternance chez
+        <strong> EDF</strong>, au sein du service DIGIT du Groupe Proxi EST Alpes Nord, me permet
+        d'appliquer ces compétences sur des installations hydroélectriques réelles.
+      </p>
+      <p>
+        Mon objectif : devenir architecte ou ingénieur réseau, capable de concevoir des infrastructures
+        fiables, sécurisées et supervisables — que ce soit pour un opérateur télécom ou un site
+        industriel sensible.
+      </p>
+    </div>
+    <div class="bio-stack">
+      <span>Config. réseau</span><span>Hirschmann</span><span>Caméras AXIS</span>
+      <span>DECT / GSM</span><span>OSPF</span><span>DMVPN</span><span>Ansible</span>
+      <span>Wireshark</span><span>Python</span><span>Packet Tracer</span>
+    </div>
+  </section>
+
+  <!-- ALTERNANCE EDF -->
+  <section id="alternance" class="alternance">
+    <div class="section-head">
+      <span class="tag">02 — Alternance</span>
+      <h2>Mission téléconduite — Groupe EDF</h2>
+    </div>
+
+    <div class="alt-grid">
+      <div class="alt-card">
+        <h3>Problématique</h3>
+        <p>Deux sites hydroélectriques nécessitent une supervision à distance fiable. L'enjeu :
+        déployer un système de téléconduite intégrant un parc d'environ 80 caméras AXIS pour
+        assurer le monitoring en temps réel des installations.</p>
+      </div>
+      <div class="alt-card">
+        <h3>Méthodologie</h3>
+        <ul>
+          <li>Gestion logistique : commandes, réception, inventaire du matériel</li>
+          <li>Annotation et intégration dans les bases de données projet</li>
+          <li>Configuration des caméras AXIS : adressage IP, paramétrage réseau</li>
+          <li>Tests de validation fonctionnelle avant déploiement</li>
+          <li>Coordination avec les équipes projet et chefs de site</li>
+        </ul>
+      </div>
+      <div class="alt-card">
+        <h3>Résultats</h3>
+        <ul>
+          <li>Parc d'environ 80 caméras configuré et opérationnel</li>
+          <li>Documentation et inventaire complets en base de données</li>
+          <li>Équipements validés et prêts pour le déploiement</li>
+          <li>Contribution directe à la téléconduite inter-sites</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alt-stats">
+      <div><strong>~80</strong><span>caméras AXIS configurées</span></div>
+      <div><strong>2</strong><span>sites hydroélectriques</span></div>
+      <div><strong>100%</strong><span>équipements validés en test</span></div>
+    </div>
+
+    <div class="alt-also">
+      <h3>Maintenance &amp; configuration télécom</h3>
+      <p>En parallèle, maintenance préventive et corrective des équipements télécoms sur les
+      différents sites du Groupe Proxi EST Alpes Nord : diagnostic d'incidents, installation de
+      commutateurs, configuration de switchs et routeurs industriels Hirschmann, paramétrage
+      de bornes DECT et intégration de passerelles GSM.</p>
+    </div>
+  </section>
+
+  <!-- SAE -->
+  <section id="sae" class="sae">
+    <div class="section-head">
+      <span class="tag">03 — Formation</span>
+      <h2>Mes Situations d'Apprentissage et d'Évaluation</h2>
+    </div>
+
+    <div class="patch-panel">
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P01</span><h3>SAÉ 1.01 – Hygiène informatique</h3></div>
+        <p>Sensibilisation approfondie à la cybersécurité et application de mesures d'hygiène
+        numérique complètes pour sécuriser un environnement de travail.</p>
+        <div class="chips"><span>Cybersécurité</span><span>Politique de sécurité</span><span>Audit</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Vidéo de sensibilisation à l'hygiène informatique,
+        recherche sur les attaques courantes et les parades associées.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P02</span><h3>SAÉ 1.02 – S'initier aux réseaux informatiques</h3></div>
+        <p>Apprentissage fondamental des concepts réseau avec manipulation pratique d'équipements
+        et configuration de topologies simples.</p>
+        <div class="chips"><span>TCP/IP</span><span>Câblage</span><span>Configuration</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Câblage Ethernet droit/croisé, adressage IP
+        statique et dynamique, tests ping/traceroute/netstat, analyse de trames Wireshark.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P03</span><h3>SAÉ 1.03 – Dispositif de transmission</h3></div>
+        <p>Étude des systèmes de transmission avec analyse des caractéristiques physiques et
+        électriques des signaux.</p>
+        <div class="chips"><span>Signaux analogiques</span><span>Mesures électriques</span><span>Oscilloscope</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Analyse d'un système émetteur/récepteur,
+        mesures de puissance, fréquence et bande passante, rapport technique détaillé.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P04</span><h3>SAÉ 1.04 – Se présenter sur internet</h3></div>
+        <p>Création d'une présence web professionnelle avec développement d'un CV interactif et
+        responsive utilisant les dernières technologies.</p>
+        <div class="chips"><span>HTML5/CSS3</span><span>Responsive</span><span>UX/UI</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Page web moderne et responsive, CSS Grid
+        et Flexbox, optimisation mobile — ce portfolio en est le prolongement.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P05</span><h3>SAÉ 1.05 – Traiter des données</h3></div>
+        <p>Développement de scripts pour l'automatisation du traitement de données système et
+        réseau avec analyse statistique.</p>
+        <div class="chips"><span>PowerShell</span><span>JSON/XML</span><span>Automatisation</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Script PowerShell d'extraction de logs,
+        export multi-format (JSON, CSV), génération de rapports automatisés.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P06</span><h3>SAÉ 2.01 – Construire un réseau</h3></div>
+        <p>Conception et déploiement complet d'une infrastructure réseau d'entreprise avec
+        segmentation avancée et services intégrés.</p>
+        <div class="chips"><span>VLAN</span><span>Routage</span><span>Cisco IOS</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Plan d'adressage optimisé, VLANs
+        inter-connectés, trunking, routage inter-VLAN, déploiement physique documenté.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P07</span><h3>SAÉ 2.02 – Mesurer un signal</h3></div>
+        <p>Analyse de signaux avec utilisation d'équipements de mesure et traitement numérique
+        du signal.</p>
+        <div class="chips"><span>FFT</span><span>Analyse spectrale</span><span>ESP32</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Génération de signaux sur ESP32,
+        caractérisation de filtres analogiques, rapport d'analyse technique.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P08</span><h3>SAÉ 2.03 – Mettre en place une solution informatique</h3></div>
+        <p>Premier projet de développement web complet : site de gestion de ludothèque avec
+        base de données.</p>
+        <div class="chips"><span>Django</span><span>MariaDB</span><span>HTML/CSS</span><span>Linux</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Inscription, catalogue de jeux, notes
+        et commentaires, import de données en masse, déploiement sur serveur Linux.</p>
+      </article>
+
+      <article class="port port-wide port-featured">
+        <div class="port-head"><span class="port-id">P09</span><h3>SAÉ 04 – Déployer une infrastructure opérateur et services clients</h3></div>
+        <p>Conception, en tant qu'architecte réseaux, d'une architecture reliant deux sites
+        distants via un opérateur internet, avec services réseaux (web, mail) et services
+        multimédias (VoIP, IPTV, VoD) gérés de façon automatisée.</p>
+        <div class="chips"><span>OSPF</span><span>PIM-SM Multicast</span><span>DMVPN / GRE+IPsec</span><span>Ansible</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Architecture multi-sites avec infrastructure
+        opérateur interconnectant un réseau de contenu (VoIP, IPTV/VoD, Web, Mail) à deux sites
+        clients ; routage unicast en OSPF et diffusion vidéo en multicast PIM-SM (arborescence
+        partagée via Rendezvous Point) ; sécurisation des liaisons inter-sites par tunnels DMVPN
+        (GRE + IPsec, sans NAT pour préserver la VoIP) ; automatisation de la configuration réseau
+        via Ansible.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P10</span><h3>SAÉ 3.01 – Prise Connectée Intelligente Wifi</h3></div>
+        <p>Conception et réalisation d'une prise électrique connectée en Wifi : schéma électronique,
+        broker MQTT sur Raspberry Pi, serveur Django et capteur de température.</p>
+        <div class="chips"><span>ESP8266</span><span>MQTT</span><span>Raspberry Pi</span><span>Django</span><span>EasyEDA</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Prise pilotable depuis une interface web
+        temps réel et une app Android, bouton physique, LED d'état, affichage de température.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P11</span><h3>SAÉ 3.02 – Développer des applications communicantes</h3></div>
+        <p>Conception d'une architecture distribuée de routage en oignon : communication anonyme
+        entre clients via des routeurs virtuels, inspirée du protocole Tor.</p>
+        <div class="chips"><span>Python</span><span>Sockets TCP</span><span>Chiffrement asymétrique</span><span>PyQt6</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Réseau de routeurs virtuels multi-threads,
+        chiffrement par couches successives, interface graphique PyQt6, déploiement multi-VM.</p>
+      </article>
+
+      <article class="port port-wide">
+        <div class="port-head"><span class="port-id">P12</span><h3>SAÉ 3.03 – Concevoir un Réseau Multi-Sites</h3></div>
+        <p>Intégrateur réseau pour deux entreprises e-commerce sur 3 sites (Strasbourg, Nancy,
+        Metz) : architecture LAN hiérarchique, services DNS/Web/Mail/AD et interconnexion
+        MPLS-VPN inter-AS via FAI simulé sur EVE-NG.</p>
+        <div class="chips"><span>VLAN / VRRP</span><span>MPLS-VPN</span><span>BGP / MP-BGP</span><span>DNS / Apache</span><span>EVE-NG</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Architecture LAN commutée avec MST et VRRP,
+        services réseau complets, interconnexion MPLS-VPN avec VRF, Route-Reflectors BGP et filtrage
+        de routes inter-AS.</p>
+      </article>
+
+      <article class="port">
+        <div class="port-head"><span class="port-id">P13</span><h3>SAÉ 3.04 – Découvrir le pentesting</h3></div>
+        <p>Introduction aux techniques de test d'intrusion à travers des challenges pratiques
+        sur Root-Me.</p>
+        <div class="chips"><span>OSINT</span><span>Password Cracking</span><span>AWS</span><span>Kali Linux</span></div>
+        <p class="realis"><strong>Réalisations :</strong> Challenges Root-Me en 50 heures :
+        investigation OSINT, cassage de hashs, exploitation de configurations AWS, failles web.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="projets">
+    <div class="section-head">
+      <span class="tag">04 — Projets</span>
+      <h2>Projets personnels</h2>
+    </div>
+    <div class="proj-grid">
+      <article class="proj-card">
+        <h3>Portfolio réseau interactif</h3>
+        <p>Conception de ce portfolio sur le thème d'un panneau de brassage opérateur :
+        chaque SAÉ est traitée comme un module connecté, avec diagramme de topologie animé
+        en SVG et design system cohérent inspiré de l'univers télécom.</p>
+      </article>
+      <article class="proj-card">
+        <h3>Engagement de terrain — SDIS 68</h3>
+        <p>Sapeur-pompier volontaire depuis 2023, formé dès 2018 en tant que Jeune Sapeur-Pompier
+        puis formateur. Gestion d'urgence, vérification et entretien du matériel, application
+        rigoureuse des procédures — une rigueur que j'applique aujourd'hui à la configuration
+        et au contrôle des équipements réseau.</p>
+      </article>
+      <article class="proj-card">
+        <h3>Arbitrage FFF</h3>
+        <p>Arbitre de football depuis 2024 dans le Haut-Rhin : prise de décision rapide, gestion
+        des comportements, application stricte du règlement — des réflexes utiles pour la
+        résolution d'incidents techniques sous contrainte de temps.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="section-head">
+      <span class="tag">05 — Contact</span>
+      <h2>Discutons réseau</h2>
+    </div>
+    <p class="contact-lede">Étudiant BUT R&amp;T — ROM · en alternance chez EDF · ouvert aux échanges techniques et opportunités.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:bouhssineadame@gmail.com">
+        <span class="k">Email</span><span class="v">bouhssineadame@gmail.com</span>
+      </a>
+      <a class="contact-card" href="tel:+33782542471">
+        <span class="k">Téléphone</span><span class="v">07 82 54 24 71</span>
+      </a>
+      <div class="contact-card">
+        <span class="k">Localisation</span><span class="v">Wittelsheim, Haut-Rhin</span>
+      </div>
+      <a class="contact-card" href="CV_Adame_Bouhssine.pdf" target="_blank">
+        <span class="k">Document</span><span class="v">Télécharger le CV ↗</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 — Adame Bouhssine</span>
+  <span>BUT Réseaux &amp; Télécommunications · IUT de Colmar · Spécialité ROM</span>
+</footer>
+
 </body>
 </html>
